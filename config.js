@@ -26,14 +26,14 @@ module.exports = {
     }
   ],
   author: {
-    name: 'test',
-    photo: '/test.jpg',
-    bio: 'Test',
+    name: 'Hayato Kakiuchi',
+    photo: '/myIcon.jpg',
+    bio: 'Web,iOS Engineer',
     contacts: {
-      email: 'test@gmail.com',
-      twitter: 'test',
-      github: 'test',
-      facebook: 'test'
+      email: 'uw.nobtotayah@gmail.com',
+      twitter: 'rattsl',
+      github: 'rattsl',
+      facebook: 'rattsl'
     }
   }
 };
