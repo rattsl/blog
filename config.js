@@ -1,12 +1,12 @@
 'use strict';
 
 module.exports = {
-  url: 'https://lumen.netlify.com',
+  url: 'https://rattsl.netlify.com',
   pathPrefix: '/',
-  title: 'Blog by John Doe',
+  title: 'rattsl',
   subtitle:
-    'Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.',
-  copyright: '© All rights reserved.',
+    'rattslのブログです。',
+  copyright: '© 2020 All rights reserved.',
   disqusShortname: '',
   postsPerPage: 4,
   googleAnalyticsId: 'UA-73379983-2',
@@ -28,7 +28,7 @@ module.exports = {
   author: {
     name: 'Hayato Kakiuchi',
     photo: '/myIcon.jpg',
-    bio: 'Web,iOS Engineer',
+    bio: '駆け出しのエンジニアです。感じたことなどをまとめて投稿します。',
     contacts: {
       email: 'uw.nobtotayah@gmail.com',
       twitter: 'rattsl',
