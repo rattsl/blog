@@ -1,54 +1,46 @@
 ---
-title: "A Brief History of Typography"
-date: "2016-02-02T22:40:32.169Z"
+title: "実践サーバサイドプログラミング-0日目-"
+date: "2020-04-11T22:40:32.169Z"
 template: "post"
 draft: false
-slug: "a-brief-history-of-typography"
-category: "Design Inspiration"
+slug: "day0"
+category: "Programing"
 tags:
-  - "Linotype"
-  - "Monotype"
-  - "History of typography"
-  - "Helvetica"
-description: "Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat."
-socialImage: "/media/image-0.jpg"
+  - "JavaScript"
+  - "Node.js"
+  - "サーバサイド"
+  - "N予備"
+description: "実践サーバサイドプログラミング7Daysトライアルと称し、N予備のプログラミング入門Webアプリ編の第4章を一通り学んでいきます。"
 ---
 
-**Pellentesque habitant morbi tristique** senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. *Aenean ultricies mi vitae est.* Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. 
+## 自己紹介
 
-Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui.  [Donec non enim](#) in turpis pulvinar facilisis.
+初めまして、rattsl ([＠rattsl](https://twitter.com/rattsl/)) と書いてラッツエルといいます。
 
-![Nulla faucibus vestibulum eros in tempus. Vestibulum tempor imperdiet velit nec dapibus](/media/image-0.jpg)
+最近HHKBのキーボードを購入し、タイプするたび気持ちよくなっています。リアルフォースと迷ったのですが、こっちを購入して正解でした！HHKBバンザーイ！！！と、余談はさておき。。
 
-## Header Level 2
+普段はフロント周りの言語を触りつつ、たまにインフラの勉強をしているneet弱弱エンジニアです。
 
-+ Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-+ Aliquam tincidunt mauris eu risus.
+プログラミングを始めたのは大学3年生からで、初学者定番ルートProgate、ドットインストールあたりからMarkup言語を学び、大学生限定プログラミングコミュニティである[GeekSalon](https://geek-salon.com/)でiOSアプリ、Webアプリ等を制作しておりました。
 
-Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. 
+コース終了後も個人でアプリを作ったり、インターンでプログラミングを教えるなど、どハマりしていきました。詳細は[ポートフォリオサイト](https://rattsl.github.io/Portfolio/)をご覧ください。（近々このサイトは刷新しようと思います。）
 
-<figure>
-	<blockquote>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.</p>
-		<footer>
-			<cite>— Aliquam tincidunt mauris eu risus.</cite>
-		</footer>
-	</blockquote>
-</figure>
+私自身文系の学部出身で他の情報系の学生に比べ、CS等の知識は全くありませんが、キャッチアップできるよう、日々勉強しております。
 
-### Header Level 3
+## これは何
 
-+ Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-+ Aliquam tincidunt mauris eu risus.
+早速本題に入っていきますが、今回実践サーバサイトプログラミング7Daysトライアルと勝手に称し、[N予備校](https://www.nnn.ed.nico/)（現在はコロナウイルスによる休校を受け、無償で開放中）のプログラミング教材を使ってハンズオンで勉強し、学んだこと等をアウトプットしていこうと思います。今回は0日目ということでトライアルの概要の説明から始めたいと思います。
 
-Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra.
+## 何故やるか
 
-```css
-#header h1 a {
-  display: block;
-  width: 300px;
-  height: 80px;
-}
-```
+普段React.jsやVue.jsの勉強をしているのですが、JavaScript自体GeekSalonのWebExコースで3ヶ月間しか基礎は勉強しておらず、3ヶ月の間でVueとGitの勉強もしないといけないということもあり、疎かな部分が多々ありました。（細かいところまで理解しておらず、雰囲気で書いていたこともあった）
 
-Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.
+
+
+
+## 何故この教材を使うのか
+## どうやってやるか
+## 何をするか
+## これを取り組む前に行ったこと
+## 7日後どうなっていたいか
+## 目的
