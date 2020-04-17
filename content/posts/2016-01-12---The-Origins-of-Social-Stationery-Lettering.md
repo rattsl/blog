@@ -1,51 +1,33 @@
 ---
-title: The Origins of Social Stationery Lettering
-date: "2016-12-01T22:40:32.169Z"
+title: "実践サーバサイドプログラミング-Day3-"
+date: "2020-04-17T22:40:32.169Z"
 template: "post"
 draft: false
-slug: "the-origins-of-social-stationery-lettering"
-category: "Design Culture"
-description: "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante."
-socialImage: "/media/image-3.jpg"
+slug: "day3"
+category: "Programing"
+tags:
+  - "webpack"
+  - "DOM"
+  - "jQuery"
+description: "実践サーバサイドプログラミングのDay3ということで、webpackの仕組みやDOMの操作の勉強をしていきます。"
 ---
 
-**Pellentesque habitant morbi tristique** senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. *Aenean ultricies mi vitae est.* Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. 
+## 今回やっていくこと
 
-Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui.  [Donec non enim](#) in turpis pulvinar facilisis.
+こんにちわ、rattsl（[@rattsl](https://twitter.com/rattsl)）です。
 
-![Nulla faucibus vestibulum eros in tempus. Vestibulum tempor imperdiet velit nec dapibus](/media/image-3.jpg)
+コロナウイルスによる経済対策で減収世帯限定に30万給付すると思っていたら取下げになって、次は10万円一律給付という話が出てきていますね。ハーバード大学のグレゴリー・マンキュー教授は、３月13日付のブログ記事（Thoughts on the Pandemic）で、本当に困っている人を識別（特定）することには困難が伴うから、すべての米国民に1000ドルの小切手をできる限り早期に届けることから始めるとよいとの提案を行っているそうです。この給付でお金が循環して少しでも景気がよくなればいいのですが、と余談はさておきやっていきましょう。
 
-## Header Level 2
+今回はWebpackやDOMのお勉強を進めていきたいと思います。
 
-+ Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-+ Aliquam tincidunt mauris eu risus.
+***
 
-Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. 
+## webpackとは
 
-<figure>
-	<blockquote>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.</p>
-		<footer>
-			<cite>— Aliquam tincidunt mauris eu risus.</cite>
-		</footer>
-	</blockquote>
-</figure>
+webpackとは簡単に説明すると、HTMLに組み込むためのJSのファイルを一つにまとめる役割を果たしてくれるフレームワークです。他にもnode.jsのモジュールをクライアントのHTMLで利用可能に機能もあります。
 
-### Header Level 3
+## ファイルをまとめるメリットとは？
 
-+ Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-+ Aliquam tincidunt mauris eu risus.
+なぜファイルをまとめる必要があるのでしょうか？そこにはTCP通信やブラウザに理由があります。通常、一度ブラウジングした画像やファイルなどの静的ファイルは、２回目にそのページを訪れたときに、サーバからもう一度データをリクエストすることはなく、１度目でダウンロードされた静的ファイルを使って描画します。これを**キャッシュ**といいます。キャッシュという仕組みがあるおかげで何度もリクエストする必要がなくなります。
 
-Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra.
-
-```css
-#header h1 a {
-  display: block;
-  width: 300px;
-  height: 80px;
-}
-```
-
-Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.
-
-![Test SVG](/media/cpu.svg)
+そこで、このキャッシュを利用するブラウザの挙動を利用するために、バラバラになったファイルを一つにまとめます。すると利用効率が上がり、サーバの負荷や通信量を抑えることが可能になり、同時にユーザもリソースを効率よく使うことができるというわけです。他にもHTTPのプロトコルであるTCPとwebpackのようなクライアントjavascriptをまとめるフレームワークは接続の観点から相性がいいという理由もあります。
