@@ -26,9 +26,9 @@ module.exports = {
     }
   ],
   author: {
-    name: 'Hayato Kakiuchi',
+    name: 'rattsl',
     photo: '/myIcon.jpg',
-    bio: '駆け出しのエンジニアです。感じたことなどをまとめて投稿します。',
+    bio: 'Software engineer',
     contacts: {
       email: 'uw.nobtotayah@gmail.com',
       twitter: 'rattsl',
