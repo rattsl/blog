@@ -45,5 +45,14 @@ JavaScriptの**トランスコンパイラ**。どういった役割を果たす
 
 ## ファイル作成
 
-インストールが終わったら
+インストールが終わったら今回使うファイルを生成します。
+
+```
+touch webpack.config.js
+mkdir app
+touch app/entry.js
+mkdir public/javascripts
+```
+
+`webpack.config.js`は webpackの設定を行うファイル、`app/entry.js`は、エントリポイントとしてHTMLに組み込むJavaScriptファイル、`public/javascripts`は`app/entry.js`でまとめられたJavaScriptファイルが出力されるディレクトリとなります。
 
