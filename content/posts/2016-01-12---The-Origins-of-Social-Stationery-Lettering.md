@@ -38,12 +38,13 @@ webpackとは簡単に説明すると、HTMLに組み込むためのJSのファ�
 
 ```
 yarn add webpack@4.26.1 webpack-cli@3.1.2 @babel/core@7.1.6 @babel/preset-env@7.1.6 babel-loader@8.0.4 --dev
+yarn add https://github.com/progedu/damage-calc-4006.git
 ```
 
 ### Tips: BABELとは
 JavaScriptの**トランスコンパイラ**。どういった役割を果たすかというと、ES2015以降の新しい書き方をES5の構文に変換するのに使われています。ここでは`babel-loader`という利用環境のブラウザに対応する版にコンパイルしてくれるモジュールを利用します。
 
-## ファイル作成
+## 対象ファイルの作成
 
 インストールが終わったら今回使うファイルを生成します。
 
@@ -55,4 +56,145 @@ mkdir public/javascripts
 ```
 
 `webpack.config.js`は webpackの設定を行うファイル、`app/entry.js`は、エントリポイントとしてHTMLに組み込むJavaScriptファイル、`public/javascripts`は`app/entry.js`でまとめられたJavaScriptファイルが出力されるディレクトリとなります。
+
+次に作業フォルダのルートに設置された`webpack.config.js`を次のように設定します。
+
+```
+// webpack.config.js
+
+module.exports = {
+  context: __dirname + '/app',
+  entry: './entry',
+  output: {
+    path: __dirname + '/public/javascripts',
+    filename: 'bundle.js'
+  },
+  mode: 'none',
+  module: {
+    rules: [{
+      test: /\.js$/,
+      exclude: /node_modules/,
+      use: {
+        loader: 'babel-loader',
+        options: {
+          presets: ['@babel/preset-env']
+        }
+      }
+    }]
+  }
+};
+```
+
+```
+context: __dirname + '/app',
+  entry: './entry',
+```
+
+`__dirname`はNode.jsで予め用意されている変数で、記述されたファイルのパスが格納されています。`entry`は依存関係を始めに読み込むJavaScriptのファイルを表しており、`./entry`と設定してあります。
+
+```
+output: {
+    path: __dirname + '/public/javascripts',
+    filename: 'bundle.js'
+  },
+```
+
+ここではまとめられたJavaScriptのディレクトリと出力ファイルを`bundle.js`として出力するという設定です。
+
+次に変換を行うJavaScriptのファイルを`entry.js`に記述します。
+
+```
+// entry.js
+
+'use strict';
+import dc from 'damage-calc';
+const root = document.getElementById('root');
+root.innerHTML = '<p>攻撃力 100, 防御 50, 防御貫通 30 のダメージは、'
+  + dc.effectiveDamage(100, 50, 30) + '</p>';
+```
+
+import文では`yarn add`した`progedu/damage-calc-4006`のモジュールをdcという変数に格納して利用しており、
+その後`id`を取得してその要素に`innerHTML`で変更を加えています。
+
+このように`Node.js`で実装されたモジュールを利用したJavaScriptが、クライアントのJavaScript向けに変換されるとどのようになるのかを確認してみます。コンソールで次のwebpackコマンドを実行します。
+
+```
+node_modules/.bin/webpack
+```
+
+すると次のような情報が出力されるはずです。
+
+```
+Hash: ハッシュ値
+Version: webpack 4.26.1
+Time: 4183ms
+Built at: 2020-04-20 08:52:54
+    Asset      Size  Chunks             Chunk Names
+bundle.js  5.58 KiB       0  [emitted]  main
+Entrypoint main = bundle.js
+[0] ./entry.js 218 bytes {0} [built]
+    + 1 hidden module
+```
+***
+
+### Tips: npx
+npmのバージョン5.2.0以降`npx`コマンドが利用できます。`npx webpack`をすることで`/node_modules/.bin/`までのpath通す作業が省かれます。
+
+***
+
+これが出てきたら出力成功しています。`bundle.js`を見てみます。
+
+```
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+（以下省略）
+```
+
+ここで記述されていることを簡単に説明すると、module.exportsというオブジェクトがブラウザ上で利用できるということを表しています。
+
+生成したファイルをテンプレートに組み込めば完成です。
+
+## DOMとは
+
+上記で記述したwebpackではNode.jsで開発したモジュールを、そのままクライアントのJavaScriptとして利用することができました。今度はクライアントの JavaScirptを実装する際に発生する、DOMの操作に対するフレームワークを説明します。その前にDOMとはなんでしょうか。
+
+そもそも不思議な点で言うとHTMLという言語とJavaScriptという言語は全くもって別の言語であるのに対しなぜJavaScriptからHTMLの操作ができるのかということです。結論から行ってしまうと、JavaScriptはDocment Object Model
+
+
+
+
+
+
+
+
+
+
+
+
+
 
