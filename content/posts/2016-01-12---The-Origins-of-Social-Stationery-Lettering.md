@@ -183,7 +183,11 @@ npmのバージョン5.2.0以降`npx`コマンドが利用できます。`npx we
 
 上記で記述したwebpackではNode.jsで開発したモジュールを、そのままクライアントのJavaScriptとして利用することができました。今度はクライアントの JavaScirptを実装する際に発生する、DOMの操作に対するフレームワークを説明します。その前にDOMとはなんでしょうか。
 
-そもそも不思議な点で言うとHTMLという言語とJavaScriptという言語は全くもって別の言語であるのに対しなぜJavaScriptからHTMLの操作ができるのかということです。結論から行ってしまうと、JavaScriptはDocment Object Model
+そもそも不思議な点で言うと**HTMLという言語とJavaScriptという言語は全くもって別の言語であるのに対しなぜJavaScriptからHTMLの操作ができるのか**ということです。結論から行ってしまうと、JavaScriptは**Docment Object Model**と言う仕組みを介してDOMツリーを操作し、ブラウザが差分を反映させています。
+
+例えばbody要素のp要素ののidを取得し、そのidに対応する要素を更新したりすることで見た目を変えています。(document.getElementByIdと言うAPIを利用しています。)
+
+この記述を簡単にするフレームワークが
 
 
 
