@@ -187,9 +187,80 @@ npmのバージョン5.2.0以降`npx`コマンドが利用できます。`npx we
 
 例えばbody要素のp要素ののidを取得し、そのidに対応する要素を更新したりすることで見た目を変えています。(document.getElementByIdと言うAPIを利用しています。)
 
-この記述を簡単にするフレームワークが
+このようにHTMLの文章の横断や操作、イベントハンドリング、アニメーションなどの記述を簡単にするフレームワークが**JQuery**です。早速利用していきます。今回は簡単なアニメーションを作っていきます。
 
+```
+yarn add jquery@3.4.1
+```
 
+次に`views/index.pug`にアニメーションを動かすためのボタンを作っていきます。
+
+```
+div#block.block
+button#scaling-button 拡大縮小
+```
+
+CSSも設定します。
+
+```
+// public/stylesheets/style.css
+
+.block {
++  width: 100pt;
++  height: 100pt;
++  margin: 20pt;
++  background-color: chocolate;
++}
+```
+
+最後にどのように動かすかを記述していきます。
+
+```
+// app/entry.js
+
+import $ from 'jquery';
+const block = $('#block');
+const scalingButton = $('#scaling-button');
+
+scalingButton.click(() => {
+  block.animate({ width: '200pt', height: '200pt' }, 2000);
+  block.animate({ width: '100pt', height: '100pt' }, 2000);
+});
+
+```
+
+```
+import $ from 'jquery';
+```
+
+import文では`jquery`モジュールを`$`という変数に代入しています。
+
+```
+const block = $('#block');
+const scalingButton = $('#scaling-button');
+```
+
+これらは先ほど説明したCSSのセレクタを利用してHTMLの要素を取得するAPIです。
+ここでは、`id="block"`が設定されたdiv要素と、`id="scaling-button"`が設定されたbutton要素を取得しています。
+
+```
+scalingButton.click(() => {
+  block.animate({ width: '200pt', height: '200pt' }, 2000);
+  block.animate({ width: '100pt', height: '100pt' }, 2000);
+});
+```
+
+ここではscalingButtonがクリックされたときにコールバックで`block`を`animate`させています。`click()`、`animate()`共にJQueryオブジェクトとして提供されているAPIです。2秒間かけて200ptにスケールした後、2秒間かけて100ptに戻ります。
+
+この後`node_modules/.bin/webpack`コマンドを実行し`PORT=8000 yarn start`でサーバを起動すると実装したものが確認できるはずです。
+
+以上がJQueryでした。
+
+## まとめ
+
+* webpackでJavaScriptのファイルをまとめるとサーバ側クライアント側共々通信量を減らすことができる。
+* DOMとは、HTML等のドキュメントをツリー構造として操作するAPI
+* JQueryを利用することでwrite less, do moreを実現できる。
 
 
 
