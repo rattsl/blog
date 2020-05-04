@@ -154,6 +154,59 @@ yarn add socket.io@2.1.1 socket.io-client@2.1.1
 
 ふたつインストールしていますが、`socket.io@2.1.1`はサーバサイドで利用するモジュール、`socket.io-client@2.1.1`はクライアントサイドで利用するモジュールです。
 
-次に
+次に`bin/www`の一番下に次のコードを書き加えます。このファイルはサーバを立ち上げる際に一番始めに読み込まれるファイルです。
+
+```
+var io = require('socket.io')(server);
+var os = require('os');
+
+function emitServerStatus(socket) {
+  socket.emit('server-status', { loadavg: os.loadavg() });
+  console.log('server-status event emitted.');
+}
+
+io.on('connection', function (socket) {
+  setInterval(emitServerStatus, 10, socket);
+});
+```
+
+説明していきます。ioという変数ですが通常のrequire文とは違い、ioというコネクションを表すオブジェクトを`http.Server`モジュールから引っ張ってきています。
+
+emitServerStatus関数は`server-status`というイベントをWebSocketに対して発行する関数です。AJAXの時と同様にロードアベレージが`loadavg`というプロパティで配列を持つオブジェクトが渡されるようにデータを受渡しています。socket.emit関数は`server-status`というイベントをデータと共に発行できる関数です。その後コンソールにemitできたことを表す文言を表示させています。
+
+その次の実装はWebSocketの接続ができた後、setInterval関数を10ミリ秒感覚で実行する記述です。
+
+次にクライアントサイドの実装を行ってきます。`entry.js`を次のように書き換えていきます。
+
+```
+-setInterval(() => {
+-  $.get('/server-status', {}, (data) => {
+-    loadavg.text(data.loadavg.toString());
+-  });
+-}, 10);
+
++import io from 'socket.io-client';
++const socket = io('http://localhost:8000');
++socket.on('server-status', (data) => {
++  loadavg.text(data.loadavg.toString());
++});
+```
+
+`socket.io-cliant`モジュールを読み込み、`http://localhost:8000`に接続するオブジェクトを生成します。その後WebSocketの接続上で、 `server-status`という文字列で定義されるイベントが発生した場合のハンドラを設定し、データを受け取り`jQuery`オブジェクトを利用して段落の中の文字列を描画するコードになります。そしていつも通り、webpackとサーバを起動します。
+
+先ほどのAJAXととWebSocketの実装のロードアベレージの値を比べるとどうでしょうか。今回の値の方が負荷が少なくなっていることが確認できると思います。
+
+## 要件によって使う技術を選定する
+
+ここだけを見るとAJAXよりWebSocketを使うべきだと思うかもしれませんが、両者とも特徴がありメリットデメリットもあります。なので実装するサービスに合わせて使い分けできるようにしっかりその技術の特徴を理解する必要があります。
+
+## まとめ
+
+* AJAXはブラウザ上JavaScriptから非同期通信のリクエストを行い、UIの更新を行う技術。プル型。
+* WebSocketはサーバクライアント間での双方向通信を行う規格。プッシュ型。
+* 通信方式は要件に合わせて利用する必要がある。
+
+
+
 
 
