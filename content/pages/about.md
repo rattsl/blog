@@ -1,13 +1,48 @@
 ---
 title: "About me"
 template: "page"
-socialImage: "/media/image-2.jpg"
+socialImage: "/media/blg_am.jpg"
 ---
 
-Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.
+初めまして、垣内勇人([@rattsl](https://twitter.com/rattsl))と申します。興味を持っていただきありがとうございます。このサイトは主に
 
-![Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi.](/media/image-2.jpg)
+* フロントエンドの技術周り
+* 日常の出来事
+* 興味のある分野
 
-*Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi.*
+などの記事を更新しています。現在何を考えているのか、何に興味があるのか、自分はどういう人間なのかを共有できたら嬉しいです。(下はベロベロになっている時の写真です。こんな写真しかなくてすいません。。)
 
-Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus
+![飲んでる時の写真](/media/blg_am.jpg)
+
+<div style="background-color: #fffaf0;">
+
+## プロフィール
+
+* 名前: 垣内勇人（かきうちはやと）
+* 生年月日: 1996/06/02
+* 出身地: 福井県
+* 大学: 日本大学 経済学部 経済学科
+
+</div>
+
+## 好きなこと
+サッカーとコーヒー。あとつくること全般。本は様々なジャンルのものを読みますが読むスピードが圧倒的に遅い。 
+尊敬する人は家入一真さん。起業家として、人間として、全てにおいて好きです。
+
+## 嫌いなこと
+自分。圧倒的エネルギーを持って何かに取り組んでいる人を見ると、自分は打算的で捻くれているなとつくづく感じます。素直で愚直に好きなことを追求できる人間になりたい。
+
+## 私とwebの出会い
+
+B3次、友人の影響でプログラミングを始めました。初めはDotInstallでマークアップ言語(HTML,CSS)を勉強していくにつれ、もっと深く学びたいと思い、大学生限定プログラミングコミュニティである[GeekSalon](https://geek-salon.com/)でiOSアプリ、Webアプリ等を制作していました。その後[学校法人角川ドワンゴ学園N中等部](https://n-jr.jp/)でプログラミングティーチングアシスタントとして中学生にプログラミングを教えていました。
+
+## 今後について
+わたしが高校生のとき、mixiというSNSが流行っていましたが、現在はTwitterやInstagram、TikTokが流行っています。このように短いスパンでweb業界は切り替わっていきますが、どのサービスも人の人生や価値観を変えるほど大きな力を持っています。わたし自身、高校の時は学校の先輩や後輩とmixiを通して知り合えたり、好きな人のプロフィールに足跡をつけてしまったなど友達とはしゃいでいた覚えがあります。しかしmixiのリリースが数年遅かったら友人から教えてもらった好きなバンドの情報や、価値観の共有、その友人との関係性は築けなかったかもしれません。高校のとき、SNSが存在していた為、今の自分が成り立っています。このようにwebを介したサービスは人に多大なる価値を提供する大事なインフラを担っています。様々なwebサービスを利用し、わたしの人生が変わる体験をしたように、今後はただ、今まで通りサービスを消費するだけではなく、その利用するユーザーにとって、付加価値になるようなサービスを提供できる人間になりたいと考えています。わたしは作ることが好きなので、エンジニアとして、1ユーザに、社会に貢献し続けたいと思います。
+
+これを実現させるにはどうしたらいいか。
+
+webの技術はどんどん新しくなっていく為、自己研鑽はもちろんのことですが、クライアントの抱えている問題や課題を解決できるように常に、ユーザの目線になって考える力を養っていく必要があります。その力を身に付ける為に、自分が出した答えとしては、常に自分の周りの人たちの感謝の心を持ち、優しさと強さを兼ね備えた人間であり続けたいと思います。私自身、まだまだ至らぬ点がありますが、自分の頭で考え、行動できるよう心がけていきます。
+
+
+
+
