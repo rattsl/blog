@@ -4,7 +4,13 @@ template: "page"
 socialImage: "/media/image-4.jpg"
 ---
 
-### フロントエンド
+## 技術スタック
+
+私が今まで書いたことのある技術です。JavaScript周りに興味があり、一番触っています。
+
+<div style="float: left;">
+
+### [フロントエンド]
 
 * HTML5
 * CSS3
@@ -12,20 +18,39 @@ socialImage: "/media/image-4.jpg"
 * React.js
 * Vue.js
 
-### サーバサイド
+</div>
+<div style="float: left;">
+
+### [サーバサイド]
 * Node.js
 * Express.js
 * Python
 * PostgreSQL
 * TypeScript
 
-### ネイティブ
+</div>
+<div style="float: left;">
+
+### [ネイティブ]
 * Swift
 
-### ソースコード管理
-Git(Github)
+</div>
+<div style="float: left;">
 
-### サーバ構築
-AWS
+### [ソースコード管理]
+* Git(Github)
+
+</div>
+<div style="float: left;">
+
+### [サーバ構築]
+* AWS
+
+</div>
+<div style="clear: both;">
+
+## ポートフォリオ
 
 現在更新中、、、
+
+</div>
