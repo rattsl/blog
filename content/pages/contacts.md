@@ -22,11 +22,13 @@ socialImage: "/media/image-4.jpg"
 <div style="float: left;">
 
 ### [サーバサイド]
+* PHP
 * Node.js
 * Express.js
 * Python
 * PostgreSQL
 * TypeScript
+
 
 </div>
 <div style="float: left;">
