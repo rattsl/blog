@@ -4,7 +4,7 @@ date: '2020-04-12T22:40:32.169Z'
 template: 'post'
 draft: false
 slug: 'day1'
-category: 'Programing'
+category: 'Programming'
 tags:
   - 'JavaScript'
   - 'Express'

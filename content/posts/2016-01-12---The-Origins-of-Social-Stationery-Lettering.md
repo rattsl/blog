@@ -4,7 +4,7 @@ date: "2020-04-17T22:40:32.169Z"
 template: "post"
 draft: false
 slug: "day3"
-category: "Programing"
+category: "Programming"
 tags:
   - "webpack"
   - "DOM"

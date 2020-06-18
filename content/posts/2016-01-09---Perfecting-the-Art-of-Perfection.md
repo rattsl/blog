@@ -4,7 +4,7 @@ date: "2020-04-15T23:46:37.121Z"
 template: "post"
 draft: false
 slug: "day2"
-category: "Programing"
+category: "Programming"
 tags:
   - "テスト"
   - "継続的インテグレーション"
