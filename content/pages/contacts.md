@@ -6,7 +6,7 @@ socialImage: "/media/image-4.jpg"
 
 ## 技術スタック
 
-私が今まで書いたことのある技術です。JavaScript周りに興味があり、一番触っています。
+私が今まで触ったことのある技術です。フロント周りの技術、特にJavaScriptが一番好きです。
 
 <div style="float: left;">
 
