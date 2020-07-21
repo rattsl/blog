@@ -53,6 +53,6 @@ socialImage: "/media/image-4.jpg"
 
 ## ポートフォリオ
 
-現在更新中、、、
+現在更新中...
 
 </div>
