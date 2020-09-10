@@ -28,7 +28,7 @@ module.exports = {
   author: {
     name: 'rattsl',
     photo: '/myIcon.jpg',
-    bio: 'Software engineer',
+    bio: 'creator',
     contacts: {
       email: 'uw.nobtotayah@gmail.com',
       twitter: 'rattsl',

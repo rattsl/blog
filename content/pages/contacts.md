@@ -53,6 +53,22 @@ socialImage: "/media/image-4.jpg"
 
 ## ポートフォリオ
 
-現在更新中...
+###・個人ブログ（当サイト）
+Gatsbyを使ったJAMStackなCMSを構築しました。
+記事はMDで記述しています。
+
+ソース: https://github.com/rattsl/blog
+
+###・StayWorld
+Airbnb風のデモサイトを制作しました。ディスプレイサイズ毎にレスポンシブ化しておりCSSでのアニメーションをゴリゴリ入れています。
+
+URL: https://rattsl.github.io/StayWorld/<br>
+ソース: https://github.com/rattsl/StayWorld
+
+###・コーポレートサイト
+実家の会社のコーポレートサイトを制作しました。wordpressでテーマをカスタムして作っています。現在改修中です。
+
+URL: https://daiso-seni.co.jp/<br>
+ソース: https://github.com/rattsl/wp-ds
 
 </div>
