@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-  url: 'https://rattsl.netlify.com',
+  url: 'https://rattsl.netlify.app',
   pathPrefix: '/',
   title: 'rattsl',
   subtitle:
@@ -9,7 +9,7 @@ module.exports = {
   copyright: '© 2020 All rights reserved.',
   disqusShortname: '',
   postsPerPage: 4,
-  googleAnalyticsId: 'UA-73379983-2',
+  googleAnalyticsId: 'UA-180474374-1',
   useKatex: false,
   menu: [
     {
