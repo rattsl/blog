@@ -62,6 +62,12 @@ Gatsbyを使ったJAMStackなCMSを構築しました。
 ###・StayWorld
 Airbnb風のデモサイトを制作しました。ディスプレイサイズ毎にレスポンシブ化しておりCSSでのアニメーションをゴリゴリ入れています。
 
+<div style="width: 180px; height: auto;">
+
+![STAYWORLD](/media/stayworld.png)
+
+</div>
+
 URL: https://rattsl.github.io/StayWorld/<br>
 ソース: https://github.com/rattsl/StayWorld
 
@@ -71,4 +77,16 @@ URL: https://rattsl.github.io/StayWorld/<br>
 URL: https://daiso-seni.co.jp/<br>
 ソース: https://github.com/rattsl/wp-ds
 
+###・isara.life模写制作LP
+
+<div style="width: 180px; height: auto;">
+
+![isara.life模写制作LP](/media/isara.png)
+
+</div>
+
+[iSARA](https://isara.life/)さんのwebサイトを模写コーディングしました。
+
+元ページ: https://isara.life/<br>
+ソース: https://github.com/rattsl/iSARA-imit
 </div>
