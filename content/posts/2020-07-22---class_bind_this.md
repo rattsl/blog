@@ -14,3 +14,5 @@ description: '今まであやふやにしていたclassとthisとbindメソッ�
 こんにちは、rattsl([@rattsl](https://twitter.com/rattsl1))です。今までReactやVueを触っていましたがプレーンなJSでクラスを記述したことがあまりなかった為、原点に振り返って学んだことをまとめていきます。
 
 ## hogehoge
+
+fugafuga
